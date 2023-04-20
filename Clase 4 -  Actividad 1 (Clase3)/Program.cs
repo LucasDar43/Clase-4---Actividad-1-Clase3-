@@ -3,20 +3,20 @@
     class Program
     {
 
-        public static void Maximo(int n1, int n2, int n3)
+        static int Maximo(int n1, int n2, int n3)
         {
 
             if (n1 > n2 && n1 > n3)
             {
-                Console.WriteLine(n1 + " es el numero Mayor ");
+                return n1;
             }
             else if (n2 > n1 && n2 > n3)
             {
-                Console.WriteLine(n2 + " es el numero Mayor ");
+                return n2;
             }
             else
             {
-                Console.WriteLine(n3 + " es el numero Mayor ");
+                return n3;
             }
 
         }
@@ -36,7 +36,8 @@
                 System.Console.WriteLine("Digite el tercer numero");
                 int n3 = int.Parse(Console.ReadLine());
 
-                Maximo(n1, n2, n3);
+                int mayor = Maximo(n1, n2, n3);
+                Console.WriteLine(mayor + " es el numero Mayor");
 
 
                 //NUEVO INGRESO
